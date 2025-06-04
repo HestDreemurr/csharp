@@ -1,18 +1,26 @@
 using System;
 
-public class AgeValidator {
-  public static void Main() {
+public class GradesValidator 
+{
+  public static void Main() 
+  {
     Console.Write("Digite o nome do aluno: ");
     string name = Console.ReadLine();
     
     Console.Write("Digite a nota do aluno: ");
     
-    if (int.TryParse(Console.ReadLine(), out int grade)) {
-      if (grade >= 5) {
-        Console.WriteLine($"O aluno {name} PASSOU!");
-      } else {
-        Console.WriteLine($"O aluno {name} REPROVOU!");
-      }
+    if (!int.TryParse(Console.ReadLine(), out int grade)) 
+    {
+      Console.WriteLine("Digite um número inteiro válido. Tente novamente.");
+      return;
     }
+    
+    if (grade >= 5) 
+    {
+      Console.WriteLine($"O aluno {name} PASSOU!");
+      return;
+    }
+    
+    Console.WriteLine($"O aluno {name} REPROVOU!");
   }
 }

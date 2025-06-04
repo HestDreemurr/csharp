@@ -3,8 +3,10 @@
 using System;
 using Logic;
 
-public class AnnalynRPG {
-  public static void Main() {
+public class AnnalynRPG 
+{
+  public static void Main() 
+  {
     bool knightIsAwake = false;
     bool archerIsAwake = false;
     bool prisonerIsAwake = false;
